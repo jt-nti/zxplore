@@ -1,0 +1,65 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Z Xplore",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"installGradle": true,
+			"installMaven": false,
+			"version": "17.0.14",
+			"jdkDistro": "tem"
+		},
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"installYarnUsingApt": true,
+			"version": "lts",
+			"pnpmVersion": "latest",
+			"nvmVersion": "latest"
+		},
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"version": "latest"
+		}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "./.devcontainer/post-create.sh",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"zowe.security.secureCredentialsEnabled": false,
+				"terminal.integrated.commandsToSkipShell": [
+					"-workbench.action.showCommands", // F1
+					"-workbench.action.terminal.findNext", // F3
+					"-search.action.focusNextSearchResult", // F4
+					"-workbench.action.debug.start" // F5
+				]
+				// "terminal.integrated.sendKeybindingsToShell": true // overrides commandsToSkipShell above
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"Zowe.cics-extension-for-zowe",
+				"Zowe.vscode-extension-for-zowe",
+				"IBM.zopeneditor",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-gradle",
+				"redhat.vscode-yaml"
+			]
+		}
+	}
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
