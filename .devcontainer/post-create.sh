@@ -15,7 +15,7 @@ pip3 install ebcdic tnz
 npm install -g prebuild-install
 npm install -g @zowe/cli@zowe-v3-lts
 
-zowe plugins install @zowe/cics-for-zowe-cli@zowe-v3-lts @zowe/zos-ftp-for-zowe-cli@zowe-v3-lts
+zowe plugins install @zowe/zos-ftp-for-zowe-cli@zowe-v3-lts
 
 #
 # Set up the zowe team configuration file
