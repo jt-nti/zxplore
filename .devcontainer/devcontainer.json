@@ -50,7 +50,7 @@
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"Zowe.vscode-extension-for-zowe@2.16.3",
+				"Zowe.vscode-extension-for-zowe@3.2.0",
 				"IBM.zopeneditor",
 				"vscjava.vscode-java-pack",
 				"vscjava.vscode-gradle",
