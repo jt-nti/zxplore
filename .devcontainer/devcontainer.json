@@ -2,8 +2,23 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
 	"name": "Z Xplore",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+
+	// More info: https://containers.dev/guide/dockerfile
+	"build": {
+		// Path is relative to the devcontainer.json file.
+		"dockerfile": "Dockerfile"
+	},
+
+	// More info: https://code.visualstudio.com/remote/advancedcontainers/start-processes
+	"overrideCommand": false,
+
+	// IPC_LOCK is required to run gnome-keyring-daemon.
+	// More info: https://stackoverflow.com/questions/75672304/why-does-gnome-keyring-daemon-fail-with-operation-not-permitted-in-a-dev-conta
+	"capAdd": [
+		"IPC_LOCK"
+	],
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"installGradle": true,
@@ -24,9 +39,6 @@
 		}
 	},
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
@@ -39,7 +51,6 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
-				"zowe.security.secureCredentialsEnabled": false,
 				"terminal.integrated.commandsToSkipShell": [
 					"-workbench.action.showCommands", // F1
 					"-workbench.action.terminal.findNext", // F3
