@@ -1,0 +1,26 @@
+{
+    "properties": {
+        "host": "204.90.115.200",
+        "rejectUnauthorized": false
+    },
+    "profiles": {
+        "zosmf": {
+            "type": "zosmf",
+            "properties": {
+                "port": 10443
+            }
+        },
+        "tso": {
+            "type": "tso",
+            "properties": {
+                "account": "FB3",
+                "codePage": "1047",
+                "logonProcedure": "IZUFPROC"
+            }
+        }
+    },
+    "secure": [
+        "user",
+        "password"
+    ]
+}
