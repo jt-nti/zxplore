@@ -51,6 +51,7 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
+				"zowe.jobs.paginate.enabled": false,
 				"terminal.integrated.commandsToSkipShell": [
 					"-workbench.action.showCommands", // F1
 					"-workbench.action.terminal.findNext", // F3
