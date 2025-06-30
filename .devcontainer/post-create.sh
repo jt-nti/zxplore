@@ -23,4 +23,4 @@ zowe plugins install @zowe/zos-ftp-for-zowe-cli@zowe-v3-lts
 zowe config init --global-config --user-config --overwrite --for-sure --prompt false
 zowe config set "profiles" "{}" --global-config --user-config --json
 export ZXPLORE_PROFILE=$(jq -c . .devcontainer/zxplore.profile.json) && zowe config set "profiles.zxplore" "$ZXPLORE_PROFILE" --global-config --user-config --json
-zowe config set "defaults" '{"zosmf":"zxplore.zosmf","tso":"zxplore.tso"}' --global-config --user-config --json
+zowe config set "defaults" '{"zosmf":"zxplore.zosmf","tso":"zxplore.tso","ssh":"zxplore.ssh"}' --global-config --user-config --json
