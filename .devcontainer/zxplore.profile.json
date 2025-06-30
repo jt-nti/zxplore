@@ -17,6 +17,12 @@
                 "codePage": "1047",
                 "logonProcedure": "IZUFPROC"
             }
+        },
+        "ssh": {
+            "type": "ssh",
+            "properties": {
+                "port": 22
+            }
         }
     },
     "secure": [

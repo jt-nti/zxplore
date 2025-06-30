@@ -18,9 +18,9 @@ npm install -g @zowe/cli@zowe-v3-lts
 zowe plugins install @zowe/zos-ftp-for-zowe-cli@zowe-v3-lts
 
 #
-# Set up the zowe team configuration file
+# Set up the zowe user configuration file
 #
-zowe config init --global-config --overwrite --for-sure --prompt false
-zowe config set "profiles" "{}" --global-config --json
-export ZXPLORE_PROFILE=$(jq -c . .devcontainer/zxplore.profile.json) && zowe config set "profiles.zxplore" "$ZXPLORE_PROFILE" --global-config --json
-zowe config set "defaults" '{"zosmf":"zxplore.zosmf","tso":"zxplore.tso"}' --global-config --json
+zowe config init --global-config --user-config --overwrite --for-sure --prompt false
+zowe config set "profiles" "{}" --global-config --user-config --json
+export ZXPLORE_PROFILE=$(jq -c . .devcontainer/zxplore.profile.json) && zowe config set "profiles.zxplore" "$ZXPLORE_PROFILE" --global-config --user-config --json
+zowe config set "defaults" '{"zosmf":"zxplore.zosmf","tso":"zxplore.tso"}' --global-config --user-config --json
