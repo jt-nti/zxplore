@@ -1,6 +1,5 @@
-# Zowe config files
+# The Zowe user config file should always be excluded from source control
 zowe.config.user.json
-zowe.schema.json
 
 # Z Xplore files
 /z[0-9][0-9][0-9][0-9][0-9]/
