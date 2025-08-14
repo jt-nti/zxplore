@@ -1,0 +1,51 @@
+{
+    "$schema": "./zowe.schema.json",
+    // For more information about profile types, see
+    // https://docs.zowe.org/v3.0.x/user-guide/cli-using-using-team-profiles
+    "profiles": {
+        // Parent profile for IBM Z Xplore
+        // For more information, see
+        // https://www.ibm.com/z/resources/zxplore
+        "zxplore": {
+            // Common properties for all the IBM Z Xplore services
+            "properties": {
+                "host": "204.90.115.200",
+                "rejectUnauthorized": false
+            },
+            // Service profiles
+            "profiles": {
+                "zosmf": {
+                    "type": "zosmf",
+                    "properties": {
+                        "port": 10443
+                    }
+                },
+                "tso": {
+                    "type": "tso",
+                    "properties": {
+                        "account": "FB3",
+                        "codePage": "1047",
+                        "logonProcedure": "IZUFPROC"
+                    }
+                },
+                "ssh": {
+                    "type": "ssh",
+                    "properties": {
+                        "port": 22
+                    }
+                }
+            },
+            // Values that should be stored securely
+            "secure": [
+                "user",
+                "password"
+            ]
+        }
+    },
+    "defaults": {
+        "zosmf": "zxplore.zosmf",
+        "tso": "zxplore.tso",
+        "ssh": "zxplore.ssh"
+    },
+    "autoStore": true
+}

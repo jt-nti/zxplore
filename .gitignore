@@ -1,9 +1,15 @@
 # The Zowe user config file should always be excluded from source control
 zowe.config.user.json
 
+# The Zowe config schema file should be generated since it depends on which plugins are installed
+zowe.schema.json
+
 # Z Xplore files
 /z[0-9][0-9][0-9][0-9][0-9]/
 /zxp/
+
+# Z Open Editor
+zapp.yaml
 
 # Log files
 *.log
