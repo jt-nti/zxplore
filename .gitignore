@@ -11,5 +11,11 @@ zowe.schema.json
 # Z Open Editor
 zapp.yaml
 
+# Make sure the VS Code project settings are not ignored
+!.vscode/settings.json
+
 # Log files
 *.log
+
+# Mac OS
+.DS_Store
