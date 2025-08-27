@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "zti",
+            "detail": "Z Xplore 3270 terminal session",
+            "type": "shell",
+            "command": "zti",
+            "args": [
+                "204.90.115.200:623"
+            ],
+            "options": {
+                "env": {
+                    "SESSION_SSL": "0"
+                }
+            },
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": true,
+                "close": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
