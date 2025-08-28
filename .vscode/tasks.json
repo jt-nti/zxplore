@@ -13,7 +13,10 @@
             ],
             "options": {
                 "env": {
-                    "SESSION_SSL": "0"
+                    "SESSION_SSL": "0",
+                    "TNZ_COLORS": "256",
+                    "ZTI_CURSOR_INSERT": "1",
+                    "ZTI_CURSOR_REPLACE": "5"
                 }
             },
             "presentation": {

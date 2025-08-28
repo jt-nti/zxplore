@@ -1,5 +1,8 @@
 {
     "editor.rulers": [
         72
-    ]
+    ],
+    // The 3270 terminal cursor does not have suffiecient contrast
+    // in a light theme
+    "workbench.colorTheme": "Default Dark Modern"
 }
