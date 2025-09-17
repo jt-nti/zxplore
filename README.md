@@ -13,5 +13,6 @@ zowe files list data-set ZXP.PUBLIC.*
 For more information, see:
 
 - [IBM Z Xplore](https://www.ibm.com/z/resources/zxplore)
+- [Dev Containers tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial)
+- [Rancher Desktop](https://docs.rancherdesktop.io/) (another alternative to Docker Desktop)
 - [Zowe Explorer for VS Code](https://marketplace.visualstudio.com/items?itemName=Zowe.vscode-extension-for-zowe)
-- [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers)
