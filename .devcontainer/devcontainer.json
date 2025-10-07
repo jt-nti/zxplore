@@ -45,6 +45,8 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "./.devcontainer/post-create.sh",
 
+	"postStartCommand": "zowe config secure --user-config",
+
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -96,6 +98,7 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"Zowe.vscode-extension-for-zowe@3.3.0",
+				"Zowe.cics-extension-for-zowe@3.13.2",
 				"IBM.zopeneditor@6.0.0",
 				"vscjava.vscode-java-pack",
 				"vscjava.vscode-gradle",

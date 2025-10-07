@@ -1,0 +1,16 @@
+{
+  "cics profile": {
+    "scope": "json,jsonc",
+    "prefix": "cics",
+    "body": [
+      "\"${1:cics}\": {",
+      "\t\"type\": \"cics\",",
+      "\t\"properties\": {",
+      "\t\t\"port\": ${2:1490},",
+      "\t\t\"protocol\": \"${3:http}\"",
+      "\t}",
+      "}$0"
+    ],
+    "description": "Zowe cics profile"
+  }
+}
