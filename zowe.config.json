@@ -34,6 +34,10 @@
                         "port": 22
                     }
                 }
+                // You could add a cics profile here however everyone
+                // starts their own CICS server in Z Xplore, so it is
+                // better to create the cics profile in the
+                // zowe.config.user.json file
             },
             // Values that should be stored securely
             "secure": [

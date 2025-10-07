@@ -4,8 +4,8 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "zti",
-            "detail": "Z Xplore 3270 terminal session",
+            "label": "zti (zxplore)",
+            "detail": "Open a Z Xplore 3270 terminal session",
             "type": "shell",
             "command": "zti",
             "args": [
@@ -19,6 +19,10 @@
                     "ZTI_CURSOR_REPLACE": "5"
                 }
             },
+            "runOptions": {
+                "instanceLimit": 2,
+                "instancePolicy": "prompt"
+            },
             "presentation": {
                 "echo": false,
                 "reveal": "always",
@@ -29,6 +33,71 @@
                 "close": true
             },
             "problemMatcher": []
+        },
+        {
+            "label": "cics zowe profile",
+            "type": "shell",
+            "command": "zowe",
+            "args": [
+                "config",
+                "set",
+                "\"profiles.zxplore.profiles.cics\"",
+                "\"{\\\"type\\\":\\\"cics\\\",\\\"properties\\\":{\\\"port\\\":${input:cmciPort},\\\"protocol\\\":\\\"http\\\"}}\"",
+                "--json",
+                "--user-config"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "never"
+            },
+            "hide": true
+        },
+        {
+            "label": "cics zowe default",
+            "type": "shell",
+            "command": "zowe",
+            "args": [
+                "config",
+                "set",
+                "\"defaults.cics\"",
+                "\"zxplore.cics\"",
+                "--user-config"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "never"
+            },
+            "hide": true
+        },
+        {
+            "label": "zowe config list",
+            "type": "shell",
+            "command": "zowe",
+            "args": [
+                "config",
+                "list"
+            ],
+            "problemMatcher": [],
+            "hide": true
+        },
+        {
+            "label": "cics profile (zxplore)",
+            "detail": "Create or update a Z Xplore CICS profile",
+            "dependsOn": [
+                "cics zowe profile",
+                "cics zowe default",
+                "zowe config list"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "cmciPort",
+            "description": "CMCI port.",
+            "default": "1490"
         }
     ]
 }
