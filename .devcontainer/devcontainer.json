@@ -53,6 +53,8 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
+				// The old "Show Attributes" option is still required for the CICSHW challenge.
+				"zowe.cics.showAttributes": true,
 				"zowe.jobs.paginate.enabled": false,
 				"zopeneditor.zowe": {
 					"defaultCliProfile": "zxplore.zosmf",
