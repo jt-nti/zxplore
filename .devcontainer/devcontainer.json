@@ -23,7 +23,7 @@
 		"ghcr.io/devcontainers/features/java:1": {
 			"installGradle": true,
 			"installMaven": false,
-			"version": "21.0.8",
+			"version": "21.0.10",
 			"jdkDistro": "tem"
 		},
 		"ghcr.io/devcontainers/features/node:1": {
@@ -99,9 +99,9 @@
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"Zowe.vscode-extension-for-zowe@3.3.0",
-				"Zowe.cics-extension-for-zowe@3.13.2",
-				"IBM.zopeneditor@6.0.0",
+				"Zowe.vscode-extension-for-zowe@3.4.2",
+				"Zowe.cics-extension-for-zowe@3.20.0",
+				"IBM.zopeneditor@6.4.0",
 				"vscjava.vscode-java-pack",
 				"vscjava.vscode-gradle",
 				"redhat.vscode-yaml"
